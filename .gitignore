@@ -26,7 +26,7 @@ env/
 .DS_Store
 Thumbs.db
 
-# Models (fichiers lourds, le dossier reste versionné via .gitkeep)
+# Models (large files; folder structure kept via .gitkeep)
 models/*
 !models/.gitkeep
 
