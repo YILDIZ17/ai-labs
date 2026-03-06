@@ -1,91 +1,65 @@
-# AI'Labs
+# AI Labs
 
-Personal repo for all my AI-related notebooks and projects: data science, machine learning, experiments.
+Personal repository for AI-related work : data science, machine learning, and experiments.
 
-- Data analysis and visualization
-- Classification, regression, clustering
-- Reusable scripts, configs, demos
-
-Notebooks are organized by course in `notebooks/courses/` (e.g. **data-science**, **machine-learning**).
+- **Courses:** `notebooks/courses/` : Python, data science, machine learning (NumPy, pandas, visualization, regression, etc.)
+- **Projects:** `notebooks/projects/` : End-to-end experiments (e.g. [Weather WW2](notebooks/projects/WeatherWW2) : daily temperature prediction with linear regression)
 
 ## Installation
 
-### Prerequisites
+**Prerequisites:** Python 3.7+, pip
 
-- Python 3.7 or higher
-- pip
+1. Clone or go to the project folder, then create and activate a virtual environment:
 
-### Steps
+   **Windows:**
 
-1. **Navigate to the project folder:**
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
+   ```
 
-```bash
-cd ai-labs
-```
+   **Linux / Mac:**
 
-2. **Create and activate the virtual environment (Windows):**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
 
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-```
+2. Install dependencies and run Jupyter:
 
-On Linux/Mac:
+   ```bash
+   pip install -r requirements.txt
+   jupyter notebook
+   ```
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-```
+   Or use `jupyter lab` instead of `jupyter notebook`.
 
-3. **Install dependencies:**
+Open notebooks from `notebooks/courses/<course>/` or `notebooks/projects/<project>/`.
 
-```bash
-pip install -r requirements.txt
-```
-
-4. **Launch Jupyter:**
-
-```bash
-jupyter notebook
-```
-
-Or Jupyter Lab:
-
-```bash
-jupyter lab
-```
-
-Open notebooks from `notebooks/courses/<course-name>/` or `notebooks/experiments/`.
-
-## Project Structure
+## Project structure
 
 ```
 ai-labs/
-├── apps/                   # Demos (Streamlit, Gradio, etc.)
-├── configs/                # Experiment configs (YAML, JSON)
-├── data/                   # Datasets
-├── docs/                   # Notes, cheatsheets, doc
-├── models/                 # Saved models (not versioned if large)
+├── apps/ # Demos (Streamlit, Gradio, etc.)
+├── configs/ # Experiment configs (YAML, JSON)
+├── data/ # Datasets
+├── docs/ # Notes, cheatsheets
+├── models/ # Saved models (folder kept, contents not versioned)
 ├── notebooks/
-│   ├── courses/            # By course
+│   ├── courses/
+│   │   ├── python/
 │   │   ├── data-science/
 │   │   └── machine-learning/
-│   └── experiments/        # Experiments
-├── scripts/                # Reusable Python scripts
-├── requirements.txt       # Python dependencies
+│   └── projects/
+│       └── WeatherWW2/ # Daily temperature prediction (EDA → linear regression)
+├── scripts/ # Reusable Python scripts
+├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
 
-### What's ignored by Git
-
-- **Environment:** `.venv/`, `venv/`, `env/`, `.env`, `.env.local`
-- **Python:** `__pycache__/`, `*.pyc`, `dist/`, `build/`, `*.egg-info/`
-- **Jupyter:** `**/.ipynb_checkpoints`
-- **Models:** contents of `models/` (large files); the folder is kept via `models/.gitkeep`
-- **OS:** `.DS_Store`, `Thumbs.db`
-- **Other:** `*.log`, `.cache/`
+**Git ignores:** `.venv/`, `__pycache__/`, `.ipynb_checkpoints`, `models/*` (except `.gitkeep`), `.DS_Store`, `*.log`, etc.
 
 ## Author
 
-- [Tümay YILDIZ](https://github.com/YILDIZ17)
+[Tümay YILDIZ](https://github.com/YILDIZ17)
