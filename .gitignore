@@ -3,6 +3,9 @@
 # Jupyter notebook checkpoints
 **/.ipynb_checkpoints
 
+# Plotly iframe renderer output
+**/iframe_figures/
+
 # Python
 __pycache__/
 *.py[cod]
