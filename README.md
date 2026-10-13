@@ -7,7 +7,7 @@ Personal repository for AI-related work : data science, machine learning, and ex
 
 ## Installation
 
-**Prerequisites:** Python 3.7+, pip
+**Prerequisites:** Python 3.11+, pip (or [uv](https://docs.astral.sh/uv/) for much faster installs)
 
 1. Clone or go to the project folder, then create and activate a virtual environment:
 
@@ -33,6 +33,10 @@ Personal repository for AI-related work : data science, machine learning, and ex
    ```
 
    Or use `jupyter lab` instead of `jupyter notebook`.
+
+   With uv, replace the `pip install` line with `uv pip install -r requirements.txt`.
+
+> **Moved the project folder?** A virtual environment can't be relocated: its launchers (`jupyter.exe`, `pip.exe`, etc.) keep the old path and fail with `Fatal error in launcher`. Delete `.venv` and redo steps 1 and 2.
 
 Open notebooks from `notebooks/courses/<course>/` or `notebooks/projects/<project>/`.
 
