@@ -36,3 +36,14 @@ models/*
 # Logs & cache
 *.log
 .cache/
+
+# Personal course notes (local only, not pushed for now).
+# Everything in docs/ except the .gitkeep that keeps the folder in the repo.
+/docs/*
+!/docs/.gitkeep
+
+# Claude Code: local instructions and settings, not pushed either
+/CLAUDE.md
+/CLAUDE.local.md
+/.claude/
+/.mcp.json
